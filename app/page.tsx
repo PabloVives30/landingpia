@@ -26,10 +26,10 @@ export default function Home() {
           </ul>
           <div className="flex items-center">
             <ul className="flex gap-2 transparent mr-2">
-              <li className="rounded-[10px] w-[130px] h-7 bg-white border-2 border-gray-500 items-center text-center justify-center">
-              <button className="mx-auto">Iniciar Sesión</button>
+              <li className="rounded-[10px] w-[130px] h-7 bg-white border-1 border-gray-500 items-center text-center justify-center">
+              <button className="mx-auto font-semibold">Iniciar Sesión</button>
               </li>
-              <li className="rounded-[10px] w-[130px] h-7 bg-[#886EFF] border-2 border-white  items-center text-center justify-center">
+              <li className="rounded-[10px] w-[130px] h-7 bg-[#886EFF] border-2 border-white  items-center text-center justify-center text-white font-bold">
                 <button className="mx-auto">Registrarse</button>
               </li>
             </ul>
@@ -184,56 +184,68 @@ export default function Home() {
         </div>
       </div>
       {/* End of Third Section */}
-      {/* Fourth Section */}
-      <div className="flex flex-col mt-30">
-        <div className="flex flex-col items-center justify-center text-center mx-auto mb-20">
-          <label className="text-3xl font-bold mb-3">¿Qué datos usamos?</label>
-          <label className="text-xl text-gray-500 w-3/4">P.I.A utiliza múltiples fuentes de información médica para proporcionar análisis precisos y confiables.</label>
-        </div>
-        <div className="flex flex-col p-4 ">
-          <div className="flex flex-col bg-[#EFEFEF] p-4 w-2/3 rounded-xl">
-            <div className="flex gap-2 items-center">
-              <Image  
-                src="assets/vector2-main.svg"
-                width={35}
-                height={35}
-                alt="icon1 fourth section"
+
+        {/* Fourth Section */}
+        <div className="flex flex-col mt-30">
+          <div className="flex flex-col items-center justify-center text-center mx-auto mb-20">
+            <label className="text-3xl font-bold mb-3">¿Qué datos usamos?</label>
+            <label className="text-xl text-gray-500 w-3/4">
+              P.I.A utiliza múltiples fuentes de información médica para proporcionar análisis precisos y confiables.
+            </label>
+          </div>
+
+          <div className="flex items-start gap-8 mt-[50px] p-4 mb-14">
+            {/* Left side content */}
+            <div className="flex flex-col flex-1">
+              <div className="flex flex-col bg-[#EFEFEF] p-4 rounded-xl mb-6">
+                <div className="flex gap-2 items-center">
+                  <Image src="assets/vector2-main.svg" width={35} height={35} alt="icon1 fourth section" />
+                  <label className="font-bold text-2xl">Análisis de sangre</label>
+                </div>
+                <label className="text-xl text-[#797979] mt-3 mb-2">
+                  Los estudios de sangre permiten detectar biomarcadores y valores alterados que pueden indicar el
+                  desarrollo temprano del cáncer de páncreas. Estos datos complementan la información que aportan las
+                  imágenes médicas.
+                </label>
+              </div>
+
+              <div className="flex flex-col bg-[#EFEFEF] p-4 rounded-xl mb-8">
+                <div className="flex gap-2 items-center">
+                  <Image src="assets/vector-file.svg" width={32} height={32} alt="icon2 fourth section" />
+                  <label className="font-bold text-2xl">Imágenes médicas</label>
+                </div>
+                <label className="text-xl text-[#797979] mt-3 mb-2">
+                  Radiografías, resonancias magnéticas, tomografías y otros estudios por imágenes son analizados por
+                  nuestros algoritmos para identificar patrones y anomalías que podrían indicar la presencia de cáncer
+                  pancreático.
+                </label>
+              </div>
+
+              <div className="flex gap-20 justify-center">
+                <div className="flex flex-col bg-[rgb(178,180,223)] p-4 items-center rounded-xl flex-1 max-w-56">
+                  <label className="font-bold text-[#757AD0] text-xl">90%+</label>
+                  <label className="text-[#797979] text-[15px] font-semibold">Mejora en supervivencia</label>
+                </div>
+                <div className="flex flex-col bg-[rgb(178,180,223)] p-4 items-center rounded-xl flex-1 max-w-56">
+                  <label className="font-bold text-[#757AD0] text-xl">95%+</label>
+                  <label className="text-[#797979] text-[15px] font-semibold">Precisión diagnóstica</label>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex-shrink-0">
+              <Image
+                src="assets/img-4.svg"
+                width={400}
+                height={400}
+                alt="image fourth section"
+                className="object-contain"
               />
-              <label className="font-bold text-2xl">Análisis de sangre</label>
-            </div>
-            <label className="text-xl text-[#797979] mt-3 mb-2 ">Los estudios de sangre permiten detectar biomarcadores y valores alterados que pueden indicar el desarrollo temprano del cáncer de páncreas. Estos datos complementan la información que aportan las imágenes médicas.</label>
-          </div>
-          <div className="flex flex-col bg-[#EFEFEF] p-4 w-2/3 rounded-xl mt-6">
-            <div className="flex gap-2 items-center">
-              <Image 
-                src="assets/vector-file.svg"
-                width={32}
-                height={32}
-                alt="icon2 fourth section"
-              />
-              <label className="font-bold text-2xl">Imágenes médicas</label>
-            </div>
-            <label className="text-xl text-[#797979] mt-3 mb-2 ">Radiografías, resonancias magnéticas, tomografías y otros estudios por imágenes son analizados por nuestros algoritmos para identificar patrones y anomalías que podrían indicar la presencia de cáncer pancreático.</label>
-          </div>
-          <div className="flex w-2/3 mt-8 justify-center ">
-            <div className="flex flex-col bg-[rgb(178,180,223)] p-2 items-center mx-auto rounded-xl w-56">
-              <label className="font-bold text-[#757AD0] text-xl">90%+</label>
-              <label className="text-[#797979] text-[15px]">Mejora en supervivencia</label>
-            </div>
-            <div className="flex flex-col bg-[rgb(178,180,223)] p-2 items-center mx-auto rounded-xl w-56">
-              <label className="font-bold text-[#757AD0] text-xl">95%+</label>
-              <label className="text-[#797979] text-[15px]">Precisión diagnóstica</label>
             </div>
           </div>
         </div>
-        <Image 
-          src="assets/img-4.svg"
-          width={250}
-          height={250}
-          alt="image fourth section"
-        />
-      </div>
       {/* End of Fourth Section */}
+
       {/* Fifth Section */}
       <div className="flex flex-col text-white bg-[#757AD0] p-6">
         <div className="flex flex-col items-center text-center mx-auto mt-10 mb-10">
@@ -241,7 +253,7 @@ export default function Home() {
           <label className="text-xl mt-1 w-2/3">Únete a la revolución en la detección temprana del cáncer de páncreas. Solicita acceso a nuestra plataforma y mejora los resultados de tus pacientes.</label>
         </div>
         <div className="flex gap-3 mx-auto text-center items-center">
-          <button className="bg-[#6F73C2] rounded-[10px] p-2 flex gap-2 h-15 w-[250px] text-center items-center mx-auto">
+          <button className="bg-[#6F73C2] rounded-[10px] p-2 flex gap-2 h-15 w-[200px] text-center items-center mx-auto">
             <Image 
               src="assets/vector-lupa.svg"
               width={20}
@@ -250,7 +262,7 @@ export default function Home() {
             />
             <label className="">Buscar Médicos</label>
           </button>
-          <button className="bg-[#757AD0] border-1 border-white rounded-[10px] p-2  h-15 w-[250px]">
+          <button className="bg-[#757AD0] border-1 border-white rounded-[10px] p-2  h-15 w-[200px]">
             Solicitar Acceso
           </button>
         </div>
@@ -258,7 +270,7 @@ export default function Home() {
       {/* End of Fifth Section */}
       {/* Footer */}
       <div className="flex p-4 mt-10 mb-30">
-        <div className="flex flex-col">
+        <div className="flex ">
           <div className="flex flex-col">
             <div className="flex gap-2 items-center text-center">
               <Image 
@@ -270,7 +282,33 @@ export default function Home() {
               />
               <label className="font-bold text-xl">P I A</label>
             </div>
-            <label className="text-[15px] w-[60%]">Inteligencia artificial para la detección temprana del cáncer de páncreas.</label>
+            <label className="text-[16px] w-[60%]">Inteligencia artificial para la detección temprana del cáncer de páncreas.</label>
+          </div>
+          <div className="flex gap-30 justify-between  ">
+            <div className="flex flex-col">
+              <ul className="flex flex-col bg-transparent">
+                <li className="font-bold text-xl mb-4">Producto</li>
+                <li className="text-[#797979] text-[15px] mb-2">Documentación</li>
+                <li className="text-[#797979] text-[15px] mb-2">Características</li>
+                <li className="text-[#797979] text-[15px] mb-2">Precios</li>
+              </ul>
+            </div>
+            <div className="flex flex-col">
+              <ul className="flex flex-col bg-transparent">
+                <li className="font-bold text-xl mb-4">Recursos</li>
+                <li className="text-[#797979] text-[15px] mb-2">Redes Sociales</li>
+                <li className="text-[#797979] text-[15px] mb-2">Casos de Estudio</li>
+                <li className="text-[#797979] text-[15px] mb-2">Soporte Técnico</li>
+              </ul>
+            </div>
+            <div className="flex flex-col">
+              <ul className="flex flex-col bg-transparent">
+                <li className="font-bold text-xl mb-4">Contacto</li>
+                <li className="text-[#797979] text-[15px] mb-2">Contactanos</li>
+                <li className="text-[#797979] text-[15px] mb-2">Privacidad</li>
+                <li className="text-[#797979] text-[15px] mb-2">Términos</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
